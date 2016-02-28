@@ -17,17 +17,16 @@
 
     var fireflies = {},
         fireflyIndex = 0,
-        numFireflies = 20;
+        numFireflies = 28;
 
     var Firefly = function() {
-        //console.log("Create new fly");
 
         var settings = {
             alpha: 0,
             maxAlpha: Math.random() * 1 + .25,
             radius: Math.random() * 250,
-            speed: .1 + Math.random() * 2,
-            size: Math.random() * 20,
+            speed: .1 + Math.random() * 1.2,
+            size: Math.random() * 22 + 12,
             xPos: Math.round(Math.random() * canvasWidth),
             yPos: Math.round(Math.random() * canvasHeight - 200),
             maxLife: Math.round(Math.random() * 15000 + 1000),
@@ -76,7 +75,7 @@
         var newY = this.yPos + Math.sin(this.counter / 100) * this.radius;
 
         mainContext.globalAlpha = this.alpha;
-        mainContext.drawImage(firefly, newX, newY);
+        mainContext.drawImage(firefly, newX, newY, this.size, this.size);
     }
 
     function populateFly(id) {
