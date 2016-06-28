@@ -1,3 +1,7 @@
+/**
+ * @author Jeremy Gray <speeqr@gmail.com>
+ */
+
 (function() {
     var mainCanvas = document.getElementById("fireflyCanvas");
     var mainContext = mainCanvas.getContext('2d');
